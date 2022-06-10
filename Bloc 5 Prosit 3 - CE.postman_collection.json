@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "32f39001-e462-4b9e-84dd-8ad3dcff1c74",
+		"name": "Bloc 5 Prosit 3 - CE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19070666"
+	},
+	"item": [
+		{
+			"name": "get sensor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sensors/13000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sensors",
+						"13000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sensors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sensors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sensors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete sensor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sensors/1112",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sensors",
+						"1112"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add sensor",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Code_commune_INSEE\": 1112,\r\n    \"Nom_commune\": \"TESTTTTT\",\r\n    \"Code_postal\": 13000,\r\n\t\"lattitude\": 46.2054981558,\r\n\t\"longitude\": 5.65781475272\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/sensors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sensors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update sensor",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nom_commune\": \"HugoLand-CE\",\r\n    \"Code_postal\": 13000,\r\n\t\"lattitude\": 46.2054981558,\r\n\t\"longitude\": 5.65781475272\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/sensors/1111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sensors",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
