@@ -2,21 +2,19 @@
 npm init -y
 
 ## Install dependencies
-npm install -D typescript
-npm install -D tslint
+
 npm install -S express
+
+npm install -D -g typescript
+
 npm install -D @types/express
+npm install -D @types/node
 
 ## Init typescript
 tsc --init
 
-## Init tslint
-./node_modules/.bin/tslint --init
-
 ## Edit package.json
-"main": "dist/app.js",
+"main": "dist/app.ts",
     "scripts": {
-        "start": "tsc && node dist/app.js"
+        "start": "tsc && node dist/app.ts"
     },
-
-
